@@ -29,7 +29,7 @@
             #enemyWegger {
                 width: 400px;
                 height: 200px;
-                background: url("https://media.discordapp.net/attachments/629060103177371648/1065693552916561950/IMG_2922.jpg");
+                background: url("./images/rowan.jpg");
                 position: relative;
             }
 
@@ -81,15 +81,17 @@
                 font-family: 'NIGHTMARE PILLS';
                 font-weight: bold;
                 font-style: normal;
-                background: url("https://media.discordapp.net/attachments/629060103177371648/1065694827150315652/image0.jpg?width=100&height=50");
+                background: url("./images/continue.jpg");
+                background-size: 100px 50px;
             }
 
             .d {
                 position: absolute;
                 width: 100px;
                 height: 50px;
-                background: url("https://media.discordapp.net/attachments/746794816851017839/1067504413767381043/image0.jpg?width=100&height=50");
+                background: url("./images/swarm.png");
                 background-position: bottom;
+                background-size: 100px 75px;
             }
 
             .boss {
@@ -120,7 +122,7 @@
             }
 
             .jumpscare {
-                background-image: url("https://media.discordapp.net/attachments/629060103177371648/1098634645035294740/IMG_1931.gif");
+                background-image: url("./images/jumpscare.gif");
                 background-position: center;
                 background-size: cover;
                 position: absolute;
@@ -134,6 +136,7 @@
                 opacity: 0;
                 transition: opacity 1s;
                 z-index: 5;
+                background-size: 301px 401px;
             }
 
             #thequestion {
@@ -147,7 +150,7 @@
             .aartu {
                 width: 100px;
                 height: 50px;
-                background-image: url("https://media.discordapp.net/attachments/746794816851017839/1101634457431195688/IMG_1180.jpg?width=301&height=401");
+                background-image: url("./images/aartu.png");
                 background-size: contain;
                 background-position: center;   
                 color: blue;
@@ -161,6 +164,7 @@
                 height: 75px;
                 position: absolute;
                 top: 100px;
+                background-size: 301px 401px;
                 animation-name: erogjwrgiuherojewgiuhwroghwer;
                 animation-duration: 8s;
                 animation-iteration-count: infinite;
@@ -184,7 +188,7 @@
             <rect id="healthBar" width="300" height="25" style="fill:lawngreen;"/>
         </svg>
         <center>
-        <img id="logo" src="https://media.discordapp.net/attachments/629060103177371648/1070028855215128606/Ohmyidea.png?width=401&height=401" width="150px" height="150px">
+        <img id="logo" src="./Ohmyidea.png" width="150px" height="150px">
         <p id="ewgpooweg">0</p><p id="scoreIncrease"></p><p id="timer">3</p>
         <button id="enemyWegger" onclick="increase()"></button><br>
         <p id="announce"></p>
@@ -192,45 +196,45 @@
         <p id="thequestion"></p>
         <script type="text/javascript">
             var common_sprites = [
-                {link: "https://media.discordapp.net/attachments/629060103177371648/1065693552916561950/IMG_2922.jpg", message: "Rowan Restrained!", position: "", rarity: "common"},
-                {link: "https://media.discordapp.net/attachments/629060103177371648/1065814509605900298/image0.jpg?width=301&height=401", message: "Ash Assassinated!", position: "center", rarity: "common"},
-                {link: "https://media.discordapp.net/attachments/629060103177371648/1065815341025996841/image0.jpg", message: "Philosopher Finished!", position: "center", rarity: "common"},
-                {link: "https://media.discordapp.net/attachments/629060103177371648/1067505163687972915/IMG_2998.jpg?width=231&height=401", message: "Robin Ravaged!", position: "center", rarity: "common"},
-                {link: "https://media.discordapp.net/attachments/629060103177371648/1065815940165546044/image0.jpg?width=299&height=401", message: "Adam Annihilated!", position: "", rarity: "common"}
+                {link: "./images/rowan.jpg", message: "Rowan Restrained!", position: "", rarity: "common"},
+                {link: "./images/ash.jpg", message: "Ash Assassinated!", position: "center", rarity: "common", size: "301px 401px"},
+                {link: "./images/philosopher.jpg", message: "Philosopher Finished!", position: "center", rarity: "common"},
+                {link: "./images/robin.jpg", message: "Robin Ravaged!", position: "center", rarity: "common", size: "231px 401px"},
+                {link: "./images/adam.jpg", message: "Adam Annihilated!", position: "", rarity: "common", size: "299px 401px"}
             ];
 
             var rare_sprites = [
-                {link: "https://media.discordapp.net/attachments/629060103177371648/1065694423364677702/IMG_2833.jpg", message: "Steve Slaughtered!", position: "center", rarity: "rare"},  
-                {link: "https://media.discordapp.net/attachments/629060103177371648/1067506449548316753/IMG_0586.JPG?width=301&height=401", message: "Shirt Monster Slain!", position: "center", rarity: "rare"},
-                {link: "https://media.discordapp.net/attachments/1099021292478402732/1105144285109702717/IMG_1994.jpg?width=301&height=401", message: "Amaru Alleviated", position: "center", rarity: "rare"}
+                {link: "./images/steve.jpg", message: "Steve Slaughtered!", position: "center", rarity: "rare"},  
+                {link: "./images/shirt.jpg", message: "Shirt Monster Slain!", position: "center", rarity: "rare", size: "301px 401px"},
+                {link: "./images/amaru.jpg", message: "Amaru Alleviated", position: "center", rarity: "rare", size: "301px 401px"}
             ];
 
             var epic_sprites = [
-                {link: "https://media.discordapp.net/attachments/629060103177371648/1067211253413576766/IMG_2983.jpg?width=301&height=401", message: "Spencer Smashed!", position: "center", rarity: "epic"},
-                {link: "https://media.discordapp.net/attachments/629060103177371648/1067508365229568000/IMG_0024.jpg?width=301&height=401", message: "Chung Chomped!", position: "", rarity: "epic"}
+                {link: "./images/sammy.jpg", message: "Sammy Smashed!", position: "center", rarity: "epic", size: "301px 401px"},
+                {link: "./images/chung.jpg", message: "Chung Chomped!", position: "", rarity: "epic", size: "301px 401px"}
             ];
 
             var legendary_sprites = [
-                {link: "https://media.discordapp.net/attachments/629060103177371648/1067128650459250748/IMG_1352.jpg", message: "Bologna Busted!", position: "", rarity: "legendary"},
-                {link: "https://media.discordapp.net/attachments/629060103177371648/1067507152048099528/IMG_2999.jpg?width=297&height=401", message: "Rubie figured out what the fuck she was doing!", position: "", rarity: "legendary"}
+                {link: "./images/bologna.jpg", message: "Bologna Busted!", position: "", rarity: "legendary"},
+                {link: "./images/rubie.jpg", message: "Rubie figured out what the fuck she was doing!", position: "", rarity: "legendary", size: "297px 401px"}
             ];
 
             var special_sprites = [
-                {link: "https://media.discordapp.net/attachments/746794816851017839/1067504413767381043/image0.jpg?width=285&height=401", message: "Swarm Slammed!", position: "", rarity: "swarm", sound: "https://cdn.discordapp.com/attachments/629060103177371648/1070468222224191559/ezgif.com-gif-maker.mp3"},
-                {link: "https://media.discordapp.net/attachments/629060103177371648/1072565475692781672/IMG_1019.JPG?width=500&height=250", message: "Boss Beaten!", position: "center", rarity: "boss"},
-                {link: "https://media.discordapp.net/attachments/1099021292478402732/1100075862340157500/IMG_3700.jpg?width=301&height=401", message: "Aidanmak!", position: "center", rarity: "aidanmak"},
-                {link: "https://media.discordapp.net/attachments/1099021292478402732/1099052024374509588/B520C07D-7928-4C30-AED9-D7EE111A5EE2.jpg?width=301&height=401", message: "", position: "", rarity: "extremely"}
+                {link: "./images/swarm.png", message: "Swarm Slammed!", position: "", rarity: "swarm", sound: "./sounds/goffy.mp3", size: "285px 401px"},
+                {link: "./images/boss.jpg", message: "Boss Beaten!", position: "center", rarity: "boss", size: "500px 250px"},
+                {link: "./images/aidanmak.jpg", message: "Aidanmak!", position: "center", rarity: "aidanmak", size: "301px 401px"},
+                {link: "./images/Hoooolygood.jpg", message: "", position: "", rarity: "extremely", size: "301px 401px"}
             ];
 
             var playlist = [
-                {link: "https://cdn.discordapp.com/attachments/629060103177371648/1085947382379860069/Y2Mate.is_-_Nokia_Arabic_Ringtone_Remastered-ryWOOggzOlo-160k-1654452226412.mp3", durationn: 4000},
-                {link: "https://cdn.discordapp.com/attachments/629060103177371648/1085948330024108064/Y2Mate.is_-_DEAF_KEV_-_Invincible_NCS_Release-J2X5mJ3HDYE-160k-1654452433104.mp3", durationn: 273000},
-                {link: "https://cdn.discordapp.com/attachments/629060103177371648/1085948806153125898/Y2Mate.is_-_TheFatRat_-_Windfall-jqkPqfOFmbY-160k-1654452533426.mp3", durationn: 231000},
-                {link: "https://cdn.discordapp.com/attachments/629060103177371648/1085950475968450591/38746-newgrounds-charli.mp3", durationn: 207000},
-                {link: "https://cdn.discordapp.com/attachments/629060103177371648/1085951092237549708/Y2Mate.is_-_Pitabread_feat._Tamer_Nafar-WwoTOpJUhbg-160k-1654453038107.mp3", durationn: 303000},
-                {link: "https://cdn.discordapp.com/attachments/629060103177371648/1085954649288360068/Y2Mate.is_-_Elektronomia_-_Energy_NCS_Release-fzNMd3Tu1Zw-160k-1655321116159.mp3", durationn: 198000},
-                {link: "https://cdn.discordapp.com/attachments/629060103177371648/1085956380407636088/Y2Mate.is_-_Teminite__Panda_Eyes_-_Highscore-Qg1qZq5yjps-160k-1654633725314.mp3", durationn: 260000},
-                {link: "https://srv20.y2mate.is/download?file=586172e1b1c90a6098f51286e319df5b251003003", durationn: 149000}
+                {link: "./sounds/ringtone.mp3", durationn: 40000},
+                {link: "./sounds/invincible.mp3", durationn: 273000},
+                {link: "./sounds/windfall.mp3", durationn: 231000},
+                {link: "./sounds/AMAZINGGGGGGG.mp3", durationn: 207000},
+                {link: "./sounds/pitabread.mp3", durationn: 303000},
+                {link: "./sounds/energy.mp3", durationn: 198000},
+                {link: "./sounds/highscore.mp3", durationn: 260000},
+                {link: "./sounds/superstar.mp3", durationn: 149000}
             ];
 
             var rarityMultiplier = 1;
@@ -258,7 +262,6 @@
                 setTimeout(música, playlist[index].durationn);
                 } catch (e) { announce(e) }
             }
-
             /**
              * @param {number} val
              */
@@ -439,6 +442,7 @@
                 let rand = Math.floor(Math.random() * 100) % common_sprites.length;
                 currentEnemy = common_sprites[rand];
                 document.getElementById("enemyWegger").style.background = `url('${currentEnemy.link}')`;
+                if (currentEnemy.size != undefined) document.getElementById("enemyWegger").style.backgroundSize = currentEnemy.size;
                 if (currentEnemy.position != "") document.getElementById("enemyWegger").style.backgroundPosition = currentEnemy.position;
                 setTimer(totalClicked, 0);
             }
@@ -447,6 +451,7 @@
                 let rand = Math.floor(Math.random() * 100) % rare_sprites.length;
                 currentEnemy = rare_sprites[rand];
                 document.getElementById("enemyWegger").style.background = `url('${currentEnemy.link}')`;
+                if (currentEnemy.size != undefined) document.getElementById("enemyWegger").style.backgroundSize = currentEnemy.size;
                 if (currentEnemy.position != "") document.getElementById("enemyWegger").style.backgroundPosition = currentEnemy.position;
                 announce("Rare Enemy Spawned!!!!!");
                 rarityMultiplier = 5;
@@ -457,6 +462,7 @@
                 let rand = Math.floor(Math.random() * 100) % epic_sprites.length;
                 currentEnemy = epic_sprites[rand];
                 document.getElementById("enemyWegger").style.background = `url('${currentEnemy.link}')`;
+                if (currentEnemy.size != undefined) document.getElementById("enemyWegger").style.backgroundSize = currentEnemy.size;
                 if (currentEnemy.position != "") document.getElementById("enemyWegger").style.backgroundPosition = currentEnemy.position;
                 announce("Epic Enemy Spawned!!!!!!!!!!");
                 rarityMultiplier = 50;
@@ -467,6 +473,7 @@
                 let rand = Math.floor(Math.random() * 100) % legendary_sprites.length;
                 currentEnemy = legendary_sprites[rand];
                 document.getElementById("enemyWegger").style.background = `url('${currentEnemy.link}')`;
+                if (currentEnemy.size != undefined) document.getElementById("enemyWegger").style.backgroundSize = currentEnemy.size;
                 if (currentEnemy.position != "") document.getElementById("enemyWegger").style.backgroundPosition = currentEnemy.position;
                 announce("LEGENDARY ENEMY!!!!!!!!!!!!!!!!!!");
                 let canv = document.createElement("canvas");
@@ -480,7 +487,7 @@
                 setTimer(totalClicked, 0);
             }
 
-            var swarmSong = new Audio("https://cdn.discordapp.com/attachments/629060103177371648/1085236365857402930/Y2Mate.is_-_Note_Block_Hypixel_Skyblock_OST_Dungeon_Drama_Boss_Theme_2-miX_I52YHpI-160k-1655058777743.mp3");
+            var swarmSong = new Audio("./sounds/swarmmusic.mp3");
             swarmSong.volume = 1;
             function swarmEnemy() {
                 swarm = true;
@@ -543,7 +550,7 @@
             }
 
             var bossId = 0;
-            var bossSong = new Audio("https://cdn.discordapp.com/attachments/629060103177371648/1085225968899194920/Y2Mate.is_-_Childish_Gambino_-_Redbone_Official_Audio-Kp7eSUU9oy8-160k-1654040975496.mp3");
+            var bossSong = new Audio("./sounds/bossmusic.mp3");
 
             async function bossEnemy() {
                 currentEnemy = special_sprites[1];
@@ -557,6 +564,7 @@
 
                 let button = document.createElement("button");
                 button.style.background = `url('${special_sprites[1].link}')`;
+                button.style.backgroundSize = "500px 250px";
                 button.classList.add("boss");
                 button.setAttribute("onclick", "bossOnClick(this)");
                 let id = Math.random() * 10000;
