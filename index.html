@@ -360,7 +360,7 @@
              * @returns {{side: string, down: string}}
              */
             function movement() {
-                let amount = Math.ceil(Math.random() * 500);
+                let amount = Math.ceil(Math.random() * ((window.innerWidth / 2) - 200));
                 let another = Math.floor(Math.random() * 100) % 2;
                 let sideMovement;
                 another == 1 ? sideMovement = `+${amount}px` : sideMovement = `-${amount}px`;
