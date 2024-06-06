@@ -8,6 +8,7 @@
                 font-family: 'NIGHTMARE PILLS';
                 font-weight: normal;
                 font-style: normal;
+                overflow: hidden;
             }
 
             @keyframes a {
@@ -504,7 +505,7 @@
                         let button = document.createElement("button");
                         button.classList.add("d");
                         button.setAttribute("id", i);
-                        button.style.left = `+${Math.floor(Math.random() * 1300)}px`;
+                        button.style.left = `+${Math.floor(Math.random() * ((window.innerWidth / 2) - 50))}px`;
                         button.style.bottom = `+${Math.ceil(Math.random() * 350)}px`;
                         button.setAttribute("onclick", "swarmOnClick(this)");
                         b.appendChild(button);
